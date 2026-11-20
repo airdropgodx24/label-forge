@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Editor and OS noise
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# NOTE: /.kiro is intentionally NOT ignored.
+# Kiroween rules require the .kiro directory (specs, steering, hooks)
+# to be committed and public. Do not add it here.
