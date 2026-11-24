@@ -15,6 +15,13 @@
  * the others are shuffled with a fixed seed. Ids are r1, r2, ... by position in
  * the file. The output is the same on every run.
  *
+ * Close calls: a task carries a `closeCall` reason when its second-ranked
+ * response is also an acceptable answer (it follows every instruction in the
+ * prompt and states nothing false) and differs from the best one only in
+ * style, firmness, register or thoroughness. A careful second labeler could
+ * reasonably put it first. The reasons are printed with the answer key and are
+ * never written to the task file.
+ *
  * Rules the text follows: any fact a response may use is stated in the prompt;
  * no brand, product, language or operating system names (NFR-3), and only
  * ".example" addresses; plain text only, with line breaks and indentation kept.
@@ -99,6 +106,7 @@ If the refund hasn't arrived after 5 business days, reply to this message and I'
   // 4 ---------------------------------------------------------------
   {
     kind: "summary",
+    closeCall: "The runner-up is shorter, accurate and still two sentences, so a busy reader may prefer it to the fuller summary.",
     prompt: `Summarise the following text in two sentences for a busy reader.
 
 Text: "The city council voted 7 to 2 on Tuesday to replace the aging Harbour Street bridge, which was built in 1958 and has been restricted to light vehicles since 2019. The project is expected to cost $48 million, of which $30 million will come from a state infrastructure grant and the rest from municipal bonds. Construction is scheduled to begin next spring and take about two years, during which a temporary pedestrian walkway will stay open and buses will be rerouted over Ferry Road. Two council members who voted against the plan said the money would be better spent on repairing several smaller bridges."`,
@@ -242,6 +250,7 @@ du -a reports the size of every file and folder under /var/log, -h prints the si
   // 11 --------------------------------------------------------------
   {
     kind: "tone rewrite",
+    closeCall: "The runner-up keeps the sender's escalation and is firmer; the best response is gentler. Both are polite, professional and keep the request and deadline.",
     prompt: `Rewrite this email so it is polite and professional, keeping the same request and deadline.
 
 Email: "Where's the report?? I asked for it TWICE already. If I don't have it by 5pm I'm taking this to Dana. Not acceptable."`,
@@ -428,6 +437,7 @@ To sum up, sleep is one of the best things a student can do for their results.`,
   // 23 --------------------------------------------------------------
   {
     kind: "translation",
+    closeCall: "Both are correct translations. They differ in register (formal usted against informal tu) and in how the time is written.",
     prompt: `Translate into Spanish for a customer notice: "Your appointment has been moved to Thursday at 3 p.m. Please reply to confirm that this time works for you."`,
     ranked: [
       `Su cita se ha cambiado al jueves a las 15:00. Por favor, responda para confirmar que este horario le conviene.`,
@@ -438,6 +448,7 @@ To sum up, sleep is one of the best things a student can do for their results.`,
   // 24 --------------------------------------------------------------
   {
     kind: "advice",
+    closeCall: "The runner-up is a shorter piece of sound advice; the best response is more thorough and gives wording to use.",
     prompt: `I've been offered $62,000 for a junior analyst role. The job posting said $60,000 to $70,000. I'd like to negotiate but I'm nervous. What should I do?`,
     ranked: [
       `It's normal to feel nervous, and negotiating a first offer is common and expected. The offer is already inside the posted range, which helps you, because the employer has room to move.
@@ -493,7 +504,7 @@ export function buildTasks() {
     const idOf = (text) => responses.find((r) => r.text === text).id;
     const id = `rr-${String(i + 1).padStart(2, "0")}`;
     tasks.push({ id, type: "response-ranking", payload: { prompt: spec.prompt, responses } });
-    intended.push({ id, kind: spec.kind, ranking: spec.ranked.map(idOf) });
+    intended.push({ id, kind: spec.kind, ranking: spec.ranked.map(idOf), ...(spec.closeCall ? { closeCall: spec.closeCall } : {}) });
   });
   return { tasks, intended };
 }
@@ -506,6 +517,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   console.log(`Wrote ${tasks.length} tasks to data/sample-tasks.json`);
   console.log("\nid     responses  intended best -> worst   kind");
   for (const t of intended) {
-    console.log(`${t.id}  ${String(t.ranking.length).padEnd(9)}  ${t.ranking.join(" > ").padEnd(24)}  ${t.kind}`);
+    console.log(`${t.id}  ${String(t.ranking.length).padEnd(9)}  ${t.ranking.join(" > ").padEnd(24)}  ${t.kind}${t.closeCall ? "  [close call]" : ""}`);
   }
+  const close = intended.filter((t) => t.closeCall);
+  console.log(`\nClose calls (${close.length}):`);
+  for (const t of close) console.log(`  ${t.id}: ${t.closeCall}`);
 }

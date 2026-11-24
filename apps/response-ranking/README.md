@@ -13,7 +13,7 @@ apps/response-ranking/
   src/payload.ts                    payload reading and the ranking check
   src/instruction.ts                the job's instruction line
   src/index.ts                      exports, plus the sample job and its tasks
-  tests/                            sample data checks, ranking rules, screen tests, and the shell serving the sample job
+  tests/                            sample data checks, ranking rules, screen tests, the shell serving the sample job, and the two-pass end-to-end run
 ```
 
 ## The sample job
@@ -43,7 +43,9 @@ apps/response-ranking/
 
 Support replies (a late parcel, a missing reset email, a double charge), summaries (a news item, meeting notes into action items, a policy change), code help (a mutable default argument, an SQL query, a stack against a queue, a command-line one-liner), tone rewrites (an angry email, a newsletter notice, jargon into plain English), plus factual questions, arithmetic reasoning, two safety cases, explaining to a child, brainstorming, drafting, instruction following, translation, advice and a strict output format.
 
-The responses differ in the ways that matter in preference data: a complete answer against a thin one, a confident wrong answer, a response that breaks a stated limit (word count, bullet count, "output only the JSON"), one that invents facts, one that is accurate but too long, one that refuses when it should help and one that helps when it should refuse. Some pairs are close calls.
+The responses differ in the ways that matter in preference data: a complete answer against a thin one, a confident wrong answer, a response that breaks a stated limit (word count, bullet count, "output only the JSON"), one that invents facts, one that is accurate but too long, one that refuses when it should help and one that helps when it should refuse.
+
+**Close calls.** Four tasks are marked as close calls in the build script, each with a reason, and the build script prints them with the answer key: rr-04, rr-11, rr-23 and rr-24. A task is a close call when its second-ranked response is also an acceptable answer (it follows every instruction in the prompt and states nothing false) and differs from the best one only in style, firmness, register or thoroughness, so a careful second labeler could reasonably put it first. The marks are kept out of `data/sample-tasks.json`.
 
 ## Keeping the data honest
 
@@ -80,3 +82,15 @@ The app adds one screen and one task type to the core; it changes nothing in `co
 - **Instruction line.** The job's line from `src/instruction.ts` is the task type's instruction, which the core shell shows above the task.
 - **Enter and S** belong to the core shell (submit and skip) and are not handled by the screen. A focused arrow button is activated with Space, because Enter submits.
 - **Using it.** The core takes a task type as a plain object, so there is no registry to call. Pass `sampleJobEntry()` from `src/index.ts` to the core: `<LabelShell job tasks taskType ... />` for labeling, or as an entry in `<JobDashboard jobs={[...]} />`. The sample job id is `response-ranking-sample`.
+
+## The end-to-end run
+
+`tests/endToEnd.test.tsx` labels all 25 prompts through the real shell as Pass 1 (Ada) and Pass 2 (Grace), then checks the dashboard and the four export files against the rankings given. Its header comment holds the rules for both labelers and the figures worked out by hand. To print the dashboard reading and the export files for checking by eye:
+
+```
+E2E_REPORT=1 npx vitest --run apps/response-ranking/tests/endToEnd.test.tsx
+```
+
+The two labelers are scripted, not people. Ada gives the author's intended ranking. Grace gives the same ranking, except that she puts the runner-up first on the four close calls and orders the two weakest answers the other way on the four tasks with four responses. So the four top-choice disagreements come from the rules in the test, not from how real labelers would behave. The run shows the screen, scoring, dashboard and exports working on a realistic mix, including tasks where the full rankings differ but the top choice is the same, which count as agreement.
+
+Result of the run: 21 of 25 tasks agree on the top-ranked response (84%), kappa 0.77 (substantial agreement), 4 disagreements. A rule that compared whole rankings would have reported 17 of 25.

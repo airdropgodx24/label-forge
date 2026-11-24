@@ -158,6 +158,20 @@ describe("the sample data does not give the answer away", () => {
   });
 });
 
+describe("close calls", () => {
+  const { intended } = buildTasks();
+
+  it("marks exactly four tasks, each with a reason, in the builder only", () => {
+    const marked = intended.filter((k) => k.closeCall);
+    expect(marked.map((k) => k.id)).toEqual(["rr-04", "rr-11", "rr-23", "rr-24"]);
+    for (const k of marked) {
+      expect(k.closeCall!.length, k.id).toBeGreaterThan(40);
+      expect(k.ranking.length, k.id).toBeGreaterThanOrEqual(2);
+    }
+    expect(taskFile).not.toMatch(/closeCall/); // the marks never reach the task file
+  });
+});
+
 describe("the job's instruction line", () => {
   it("is one plain line a real RLHF job would use", () => {
     expect(INSTRUCTION).not.toMatch(/\n/);

@@ -14,5 +14,7 @@ export interface IntendedRanking {
   kind: string;
   /** Response ids from best to worst, as the author meant them. */
   ranking: string[];
+  /** Why a careful labeler could reasonably put the runner-up first. Present only on close calls. */
+  closeCall?: string;
 }
 export function buildTasks(): { tasks: RankingTask[]; intended: IntendedRanking[] };
