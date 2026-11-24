@@ -3,5 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "LabelForge: one lean labeling skeleton (queue, session, agreement scoring, export) with two apps on top - Image Preference and Response Ranking. Built with Kiro for Kiroween 2026, Skeleton Crew category."
+  "description": "LabelForge: one lean labeling skeleton (queue, session, agreement scoring, export) with two apps on top - Image Preference and Response Ranking. Built with Kiro for Kiroween 2026, Skeleton Crew category.",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "scripts": {
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit"
+  }
 }
