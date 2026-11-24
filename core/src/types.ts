@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 /**
  * Shared types for the LabelForge core.
  *
@@ -47,11 +49,8 @@ export type TaskState = "pending" | "in_progress" | "labeled" | "skipped" | "don
 /** Events that move a task between states. */
 export type TaskEvent = "start" | "submit" | "skip" | "requeue" | "complete";
 
-/**
- * The app-specific labeling area. The core only passes it through, so it is
- * opaque here. T2.2 (LabelShell) narrows it to the UI framework's element type.
- */
-export type Screen = unknown;
+/** The app-specific labeling area: whatever React can render. */
+export type Screen = ReactNode;
 
 /**
  * The plugin interface an app registers with the core. Kept tiny on purpose:

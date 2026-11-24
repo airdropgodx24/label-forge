@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run core unit tests on save",
+      "trigger": "PostFileSave",
+      "description": "Runs the core Vitest suite whenever a TypeScript file under core/ is saved.",
+      "matcher": "(^|/)core/.*\\.(ts|tsx)$",
+      "action": {
+        "type": "command",
+        "command": "cd \"$(git rev-parse --show-toplevel 2>/dev/null || echo .)\" && npm test --silent",
+        "timeout": 120
+      }
+    }
+  ]
+}
