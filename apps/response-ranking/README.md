@@ -1,14 +1,19 @@
 # Response Ranking: sample data
 
-App 2 of LabelForge. The labeler sees one prompt and 2 to 4 responses and ranks them from best to worst. This folder holds the sample job. The ranking screen comes in a later task.
+App 2 of LabelForge. The labeler sees one prompt and 2 to 4 responses and ranks them from best to worst. This folder holds the sample job and the ranking screen.
 
 ```
 apps/response-ranking/
   data/sample-tasks.json            the sample job: 25 prompt tasks
   tools/build-sample-data.mjs       the script that holds every prompt and response and writes the task file
   tools/build-sample-data.d.mts     types for the script, so the tests can import it
+  src/ResponseRankingScreen.tsx     the task screen: prompt, response cards, arrows, drag, number keys
+  src/ranking.ts                    the ranking rules as plain functions (number keys, arrows, drag)
+  src/responseRankingType.tsx       the TaskType the core uses: id, title, instruction, isComplete, labelsAgree
+  src/payload.ts                    payload reading and the ranking check
   src/instruction.ts                the job's instruction line
-  tests/sampleData.test.ts          checks the job loads through the core loader and the data is sound
+  src/index.ts                      exports, plus the sample job and its tasks
+  tests/                            sample data checks, ranking rules, screen tests, and the shell serving the sample job
 ```
 
 ## The sample job
@@ -61,3 +66,17 @@ node apps/response-ranking/tools/build-sample-data.mjs
 ```
 
 The script also prints the author's intended order for each task, best to worst. To check the data, run `npm test` from the repo root.
+
+## The ranking screen
+
+The app adds one screen and one task type to the core; it changes nothing in `core/`.
+
+- **Layout.** The prompt comes first, with its line breaks and indentation kept. Below it are the responses as cards, best at the top. Each card is numbered (Response 1 to 4, the position in the file) and shows its rank once ranked.
+- **Three ways to rank (FR-R1).** Press the response numbers from best to worst (`2`, `3`, `1` ranks response 2 first, then 3, then 1); or click the up and down arrows on a card; or drag a card by its Drag handle onto the place it should take. The cards move as you go. Pressing a number after the ranking is complete starts a new ranking, and Start over clears it.
+- **Nothing is ranked at the start.** The cards begin in file order but unranked, with no label, so submit stays off until the labeler makes an order. The screen reports a label only when every response is placed, and an empty one (which the core treats as unfinished) at every earlier step, so an old ranking can never be submitted after the labeler starts again.
+- **The label (FR-R2).** The ordered list of response ids, best first, such as `["r2", "r3", "r1"]`. Ties are not offered.
+- **Long responses (FR-R3).** Each card holds the full text in a box that scrolls once it passes about 240 pixels. Nothing is cut off, line breaks and indentation are kept, and a short note appears under any response that does not fit. The box can be focused, so the keyboard can scroll it.
+- **Agreement rule.** Two labels agree when the top-ranked response is the same, whatever the rest of the ranking says. This is a deliberate simplification, and the screen says so under the cards: "Agreement between labelers is scored on the top-ranked response only."
+- **Instruction line.** The job's line from `src/instruction.ts` is the task type's instruction, which the core shell shows above the task.
+- **Enter and S** belong to the core shell (submit and skip) and are not handled by the screen. A focused arrow button is activated with Space, because Enter submits.
+- **Using it.** The core takes a task type as a plain object, so there is no registry to call. Pass `sampleJobEntry()` from `src/index.ts` to the core: `<LabelShell job tasks taskType ... />` for labeling, or as an entry in `<JobDashboard jobs={[...]} />`. The sample job id is `response-ranking-sample`.
