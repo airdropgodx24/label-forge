@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<!-- Generated for LabelForge by tools/generate-sample-data.mjs. Original artwork, no outside assets. -->
+<title>ip-02 image A</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4d9de0"/><stop offset="1" stop-color="#cfe9fb"/></linearGradient><radialGradient id="sunglow"><stop offset="0" stop-color="#fff3c4" stop-opacity="0.75"/><stop offset="1" stop-color="#fff3c4" stop-opacity="0"/></radialGradient><linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3aa0d8"/><stop offset="1" stop-color="#1f78b4"/></linearGradient><clipPath id="frame"><rect width="640" height="400"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="640" height="400" fill="url(#sky)"/>
+<circle cx="330" cy="90" r="102" fill="url(#sunglow)"/>
+<circle cx="330" cy="90" r="30" fill="#fff3c4"/>
+<g fill="#fff" opacity="0.85"><ellipse cx="77.3" cy="74" rx="58.3" ry="18.8"/><ellipse cx="41.5" cy="79.6" rx="37.6" ry="15.1"/><ellipse cx="114.9" cy="78.7" rx="41.4" ry="16"/><ellipse cx="81.1" cy="62.7" rx="33.9" ry="16"/></g>
+<g fill="#fff" opacity="0.85"><ellipse cx="392.2" cy="36.8" rx="53.5" ry="17.3"/><ellipse cx="359.4" cy="42" rx="34.5" ry="13.8"/><ellipse cx="426.8" cy="41.1" rx="38" ry="14.7"/><ellipse cx="395.7" cy="26.4" rx="31.1" ry="14.7"/></g>
+<g fill="#fff" opacity="0.85"><ellipse cx="114.7" cy="67.4" rx="45" ry="14.5"/><ellipse cx="87.2" cy="71.8" rx="29" ry="11.6"/><ellipse cx="143.7" cy="71.1" rx="31.9" ry="12.3"/><ellipse cx="117.6" cy="58.7" rx="26.1" ry="12.3"/></g>
+<rect x="0" y="230" width="640" height="170" fill="url(#water)"/>
+<rect x="299.8" y="236" width="49.9" height="3" rx="1.5" fill="#fffbe0" opacity="0.6"/>
+<rect x="305.1" y="252" width="55.6" height="3" rx="1.5" fill="#fffbe0" opacity="0.5"/>
+<rect x="293" y="268" width="69.8" height="3" rx="1.5" fill="#fffbe0" opacity="0.5"/>
+<rect x="305.7" y="284" width="50.9" height="3" rx="1.5" fill="#fffbe0" opacity="0.4"/>
+<rect x="306.6" y="300" width="43.1" height="3" rx="1.5" fill="#fffbe0" opacity="0.4"/>
+<rect x="303.7" y="316" width="50.6" height="3" rx="1.5" fill="#fffbe0" opacity="0.3"/>
+<rect x="301.4" y="332" width="53.4" height="3" rx="1.5" fill="#fffbe0" opacity="0.3"/>
+<rect x="313.9" y="348" width="26.6" height="3" rx="1.5" fill="#fffbe0" opacity="0.2"/>
+<rect x="316.8" y="364" width="29.8" height="3" rx="1.5" fill="#fffbe0" opacity="0.2"/>
+<rect x="320.9" y="380" width="28.3" height="3" rx="1.5" fill="#fffbe0" opacity="0.1"/>
+<line x1="479.4" y1="314.6" x2="564.9" y2="314.6" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="35.2" y1="381.2" x2="104.2" y2="381.2" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="357.8" y1="366.3" x2="398.2" y2="366.3" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="40.3" y1="364.4" x2="87.2" y2="364.4" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="271.1" y1="241.4" x2="360.8" y2="241.4" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="410.9" y1="321.7" x2="489.9" y2="321.7" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="109.5" y1="389.3" x2="146.7" y2="389.3" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<line x1="155.1" y1="286.7" x2="239.3" y2="286.7" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+<polygon points="133.5,285.6 175.1,285.6 167.9,295 140.8,295" fill="#6b4f3a"/>
+<line x1="154.3" y1="285.6" x2="154.3" y2="244" stroke="#4a3b30" stroke-width="2"/>
+<polygon points="156.4,246.1 156.4,282.5 175.1,282.5" fill="#fff"/>
+<polygon points="152.2,252.3 152.2,282.5 139.8,282.5" fill="#f2ede0"/>
+<polygon points="461.4,258.2 490.8,258.2 485.7,264.9 466.5,264.9" fill="#2f4b6b"/>
+<line x1="476.1" y1="258.2" x2="476.1" y2="228.8" stroke="#4a3b30" stroke-width="2"/>
+<polygon points="477.6,230.3 477.6,256 490.8,256" fill="#fff"/>
+<polygon points="474.6,234.7 474.6,256 465.8,256" fill="#f2ede0"/>
+</g>
+</svg>

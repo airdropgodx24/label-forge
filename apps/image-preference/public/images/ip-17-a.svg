@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<!-- Generated for LabelForge by tools/generate-sample-data.mjs. Original artwork, no outside assets. -->
+<title>ip-17 image A</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f86d6"/><stop offset="1" stop-color="#bfe3f8"/></linearGradient><clipPath id="frame"><rect width="640" height="400"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="640" height="400" fill="url(#sky)"/>
+<g fill="#fff" opacity="0.85"><ellipse cx="637.3" cy="108.9" rx="54.8" ry="17.7"/><ellipse cx="603.7" cy="114.2" rx="35.3" ry="14.1"/><ellipse cx="672.6" cy="113.3" rx="38.9" ry="15"/><ellipse cx="640.8" cy="98.3" rx="31.8" ry="15"/></g>
+<g fill="#fff" opacity="0.85"><ellipse cx="243.5" cy="37.6" rx="63.3" ry="20.4"/><ellipse cx="204.7" cy="43.8" rx="40.8" ry="16.3"/><ellipse cx="284.3" cy="42.8" rx="44.9" ry="17.3"/><ellipse cx="247.6" cy="25.4" rx="36.7" ry="17.3"/></g>
+<polygon points="-10,320 56.1,133 122.2,298.2 180.5,190.1 252.8,313.1 321.8,176.9 389.5,318.5 456.8,195.1 529.9,292.5 578.7,159.7 654.6,276.2 650,320 650,400 -10,400" fill="#8a7a6a"/>
+<rect x="0" y="345" width="640" height="55" fill="#9c8a6c"/>
+</g>
+</svg>

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "ip-01",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a calm morning scene",
+      "imageA": "images/ip-01-a.svg",
+      "imageB": "images/ip-01-b.svg"
+    }
+  },
+  {
+    "id": "ip-02",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a stormy night at sea",
+      "imageA": "images/ip-02-a.svg",
+      "imageB": "images/ip-02-b.svg"
+    }
+  },
+  {
+    "id": "ip-03",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a quiet snowy village",
+      "imageA": "images/ip-03-a.svg",
+      "imageB": "images/ip-03-b.svg"
+    }
+  },
+  {
+    "id": "ip-04",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a sunset over the sea",
+      "imageA": "images/ip-04-a.svg",
+      "imageB": "images/ip-04-b.svg"
+    }
+  },
+  {
+    "id": "ip-05",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a busy city skyline at night",
+      "imageA": "images/ip-05-a.svg",
+      "imageB": "images/ip-05-b.svg"
+    }
+  },
+  {
+    "id": "ip-06",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a lone tree on a hill",
+      "imageA": "images/ip-06-a.svg",
+      "imageB": "images/ip-06-b.svg"
+    }
+  },
+  {
+    "id": "ip-07",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a foggy pine forest",
+      "imageA": "images/ip-07-a.svg",
+      "imageB": "images/ip-07-b.svg"
+    }
+  },
+  {
+    "id": "ip-08",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a starry night over a desert",
+      "imageA": "images/ip-08-a.svg",
+      "imageB": "images/ip-08-b.svg"
+    }
+  },
+  {
+    "id": "ip-09",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a rainy day in the city",
+      "imageA": "images/ip-09-a.svg",
+      "imageB": "images/ip-09-b.svg"
+    }
+  },
+  {
+    "id": "ip-10",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a mountain lake at midday",
+      "imageA": "images/ip-10-a.svg",
+      "imageB": "images/ip-10-b.svg"
+    }
+  },
+  {
+    "id": "ip-11",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: an autumn forest",
+      "imageA": "images/ip-11-a.svg",
+      "imageB": "images/ip-11-b.svg"
+    }
+  },
+  {
+    "id": "ip-12",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a sunny beach",
+      "imageA": "images/ip-12-a.svg",
+      "imageB": "images/ip-12-b.svg"
+    }
+  },
+  {
+    "id": "ip-13",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a field of tall grass at golden hour",
+      "imageA": "images/ip-13-a.svg",
+      "imageB": "images/ip-13-b.svg"
+    }
+  },
+  {
+    "id": "ip-14",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a calm sea under a full moon",
+      "imageA": "images/ip-14-a.svg",
+      "imageB": "images/ip-14-b.svg"
+    }
+  },
+  {
+    "id": "ip-15",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a village in a valley under heavy clouds",
+      "imageA": "images/ip-15-a.svg",
+      "imageB": "images/ip-15-b.svg"
+    }
+  },
+  {
+    "id": "ip-16",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a spring meadow with flowers",
+      "imageA": "images/ip-16-a.svg",
+      "imageB": "images/ip-16-b.svg"
+    }
+  },
+  {
+    "id": "ip-17",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a snowy mountain peak at sunrise",
+      "imageA": "images/ip-17-a.svg",
+      "imageB": "images/ip-17-b.svg"
+    }
+  },
+  {
+    "id": "ip-18",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a peaceful harbor with boats",
+      "imageA": "images/ip-18-a.svg",
+      "imageB": "images/ip-18-b.svg"
+    }
+  },
+  {
+    "id": "ip-19",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a lighthouse on a stormy coast",
+      "imageA": "images/ip-19-a.svg",
+      "imageB": "images/ip-19-b.svg"
+    }
+  },
+  {
+    "id": "ip-20",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a campsite under the stars",
+      "imageA": "images/ip-20-a.svg",
+      "imageB": "images/ip-20-b.svg"
+    }
+  },
+  {
+    "id": "ip-21",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a windmill on green hills",
+      "imageA": "images/ip-21-a.svg",
+      "imageB": "images/ip-21-b.svg"
+    }
+  },
+  {
+    "id": "ip-22",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a desert at noon",
+      "imageA": "images/ip-22-a.svg",
+      "imageB": "images/ip-22-b.svg"
+    }
+  },
+  {
+    "id": "ip-23",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a purple twilight sky over a lake",
+      "imageA": "images/ip-23-a.svg",
+      "imageB": "images/ip-23-b.svg"
+    }
+  },
+  {
+    "id": "ip-24",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a winter forest with falling snow",
+      "imageA": "images/ip-24-a.svg",
+      "imageB": "images/ip-24-b.svg"
+    }
+  },
+  {
+    "id": "ip-25",
+    "type": "image-preference",
+    "payload": {
+      "instruction": "Pick the image that better matches: a city in the rain at dusk",
+      "imageA": "images/ip-25-a.svg",
+      "imageB": "images/ip-25-b.svg"
+    }
+  }
+]

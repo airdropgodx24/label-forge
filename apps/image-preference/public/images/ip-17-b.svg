@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<!-- Generated for LabelForge by tools/generate-sample-data.mjs. Original artwork, no outside assets. -->
+<title>ip-17 image B</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b8fd1"/><stop offset="1" stop-color="#ffc78f"/></linearGradient><radialGradient id="sunglow"><stop offset="0" stop-color="#ffe2a8" stop-opacity="0.75"/><stop offset="1" stop-color="#ffe2a8" stop-opacity="0"/></radialGradient><clipPath id="frame"><rect width="640" height="400"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="640" height="400" fill="url(#sky)"/>
+<circle cx="360" cy="205" r="102" fill="url(#sunglow)"/>
+<circle cx="360" cy="205" r="30" fill="#ffe2a8"/>
+<polygon points="-10,320 77.4,131.8 156.8,309.9 217.1,85.2 299.5,258.3 409.5,135.3 499.2,277.3 581,118.3 664.6,302.3 650,320 650,400 -10,400" fill="#7d8fb5"/>
+<polygon points="77.4,131.8 57.4,157.8 69.4,150.8 77.4,162.8 86.4,150.8 98.4,158.8" fill="#fff" opacity="0.95"/>
+<polygon points="217.1,85.2 197.1,111.2 209.1,104.2 217.1,116.2 226.1,104.2 238.1,112.2" fill="#fff" opacity="0.95"/>
+<polygon points="409.5,135.3 389.5,161.3 401.5,154.3 409.5,166.3 418.5,154.3 430.5,162.3" fill="#fff" opacity="0.95"/>
+<polygon points="581,118.3 561,144.3 573,137.3 581,149.3 590,137.3 602,145.3" fill="#fff" opacity="0.95"/>
+<rect x="0" y="345" width="640" height="55" fill="#eef3fb"/>
+</g>
+</svg>

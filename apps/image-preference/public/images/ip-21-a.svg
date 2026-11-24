@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<!-- Generated for LabelForge by tools/generate-sample-data.mjs. Original artwork, no outside assets. -->
+<title>ip-21 image A</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4d9de0"/><stop offset="1" stop-color="#cfe9fb"/></linearGradient><radialGradient id="sunglow"><stop offset="0" stop-color="#fff3c4" stop-opacity="0.75"/><stop offset="1" stop-color="#fff3c4" stop-opacity="0"/></radialGradient><clipPath id="frame"><rect width="640" height="400"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="640" height="400" fill="url(#sky)"/>
+<circle cx="540" cy="70" r="81.6" fill="url(#sunglow)"/>
+<circle cx="540" cy="70" r="24" fill="#fff3c4"/>
+<g fill="#fff" opacity="0.85"><ellipse cx="325" cy="47.4" rx="60.5" ry="19.5"/><ellipse cx="287.9" cy="53.2" rx="39" ry="15.6"/><ellipse cx="364" cy="52.3" rx="42.9" ry="16.6"/><ellipse cx="328.9" cy="35.7" rx="35.1" ry="16.6"/></g>
+<g fill="#fff" opacity="0.85"><ellipse cx="397.2" cy="63.7" rx="56.2" ry="18.1"/><ellipse cx="362.7" cy="69.1" rx="36.2" ry="14.5"/><ellipse cx="433.4" cy="68.2" rx="39.9" ry="15.4"/><ellipse cx="400.8" cy="52.8" rx="32.6" ry="15.4"/></g>
+<g fill="#fff" opacity="0.85"><ellipse cx="169.4" cy="37.7" rx="44.5" ry="14.4"/><ellipse cx="142.1" cy="42" rx="28.7" ry="11.5"/><ellipse cx="198.1" cy="41.3" rx="31.6" ry="12.2"/><ellipse cx="172.2" cy="29" rx="25.9" ry="12.2"/></g>
+<polygon points="0,400 0,226.8 12,228.5 24,230.8 36,233.3 48,236.1 60,238.8 72,241.2 84,243.3 96,244.9 108,246.1 120,246.7 132,247 144,247.1 156,247 168,247 180,247.2 192,247.7 204,248.7 216,250.1 228,251.8 240,253.9 252,256.2 264,258.5 276,260.5 288,262.2 300,263.3 312,263.7 324,263.4 336,262.3 348,260.4 360,257.9 372,254.9 384,251.6 396,248.3 408,245.1 420,242.2 432,239.8 444,237.9 456,236.7 468,236 480,235.8 492,236 504,236.5 516,237 528,237.3 540,237.5 552,237.3 564,236.7 576,235.8 588,234.7 600,233.3 612,232 624,230.8 636,230 648,229.7 640,400" fill="#8cc47a"/>
+<polygon points="0,400 0,306.5 12,305.4 24,304.2 36,303.1 48,302.2 60,301.6 72,301.4 84,301.4 96,301.7 108,302 120,302.4 132,302.6 144,302.6 156,302.1 168,301.2 180,299.7 192,297.8 204,295.4 216,292.7 228,289.9 240,287 252,284.4 264,282.2 276,280.4 288,279.3 300,278.9 312,279.1 324,279.9 336,281.3 348,283 360,285 372,286.9 384,288.8 396,290.4 408,291.7 420,292.6 432,293.2 444,293.5 456,293.5 468,293.4 480,293.4 492,293.6 504,294.1 516,295 528,296.2 540,297.9 552,299.9 564,302.2 576,304.5 588,306.7 600,308.7 612,310.3 624,311.3 636,311.7 648,311.4 640,400" fill="#6fb061"/>
+<rect x="370.4" y="270.1" width="3.7" height="11.1" fill="#5a3f2b"/>
+<g fill="#58a85a"><circle cx="372.2" cy="261.5" r="10.4"/><circle cx="365.5" cy="266.4" r="8"/><circle cx="379" cy="266.4" r="8"/></g>
+<circle cx="369.8" cy="259.1" r="4.9" fill="#fff" opacity="0.08"/>
+<rect x="628.3" y="268.9" width="4.7" height="14.1" fill="#5a3f2b"/>
+<g fill="#3f8f4a"><circle cx="630.7" cy="257.9" r="13.3"/><circle cx="622.1" cy="264.2" r="10.2"/><circle cx="639.3" cy="264.2" r="10.2"/></g>
+<circle cx="627.5" cy="254.8" r="6.3" fill="#fff" opacity="0.08"/>
+<rect x="393.2" y="273.8" width="3.7" height="11.2" fill="#5a3f2b"/>
+<g fill="#58a85a"><circle cx="395" cy="265.1" r="10.5"/><circle cx="388.2" cy="270" r="8.1"/><circle cx="401.8" cy="270" r="8.1"/></g>
+<circle cx="392.5" cy="262.6" r="5" fill="#fff" opacity="0.08"/>
+<rect x="43.8" y="293.8" width="6.2" height="18.5" fill="#5a3f2b"/>
+<g fill="#58a85a"><circle cx="46.9" cy="279.4" r="17.5"/><circle cx="35.6" cy="287.7" r="13.4"/><circle cx="58.2" cy="287.7" r="13.4"/></g>
+<circle cx="42.8" cy="275.3" r="8.2" fill="#fff" opacity="0.08"/>
+<rect x="163.5" y="301.6" width="6.1" height="18.4" fill="#5a3f2b"/>
+<g fill="#58a85a"><circle cx="166.6" cy="287.3" r="17.3"/><circle cx="155.3" cy="295.5" r="13.3"/><circle cx="177.8" cy="295.5" r="13.3"/></g>
+<circle cx="162.5" cy="283.3" r="8.2" fill="#fff" opacity="0.08"/>
+</g>
+</svg>
