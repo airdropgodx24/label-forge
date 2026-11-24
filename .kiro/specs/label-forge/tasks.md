@@ -19,7 +19,8 @@ How to read this plan: each task is sized for one Kiro session (roughly one sitt
 - [x] **T2.2 Label shell and session.** Implement `LabelShell` and `useLabelSession` (FR-S1 to FR-S4): header, progress, action bar, keyboard shortcuts, local storage persistence, labeler name and pass selection.
 - [x] **T2.3 Agreement scoring.** Implement `AgreementScorer` (FR-A1 to FR-A3): percent agreement, Cohen's kappa using each task type's `labelsAgree` rule, disagreement extraction. Unit tests with hand-computed examples, including a kappa case worked out by hand first so the test is a real check.
 - [x] **T2.4 Export.** Implement `Exporter` (FR-E1 to FR-E4): JSONL and CSV, shared record shape, file naming. Unit test the record shape.
-- [ ] **T2.5 Dashboard.** Implement `JobDashboard` (FR-A4, FR-E1): progress counts, agreement summary in plain English, disagreement list, export buttons.
+- [x] **T2.5 Dashboard.** Implement `JobDashboard` (FR-A4, FR-E1): progress counts, agreement summary in plain English, disagreement list, export buttons.
+  - Core exit check: passed (24 Nov 2026). The dummy task type ran the full loop in tests: load tasks from JSON, two-pass labeling in the shell, agreement scoring, and export. See `core/tests/coreExit.test.tsx`.
 
 Core exit check: the core compiles, tests pass, and a dummy task type (a trivial test screen) can run a full label, score, export loop. If the dummy works, the skeleton is real.
 
