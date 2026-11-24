@@ -9,7 +9,9 @@
     "noUncheckedIndexedAccess": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "types": ["node"]
   },
-  "include": ["core/**/*.ts", "core/**/*.tsx"]
+  "include": ["core/**/*.ts", "core/**/*.tsx", "apps/**/*.ts", "apps/**/*.tsx"]
 }

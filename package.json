@@ -5,6 +5,7 @@
   "type": "module",
   "description": "LabelForge: one lean labeling skeleton (queue, session, agreement scoring, export) with two apps on top - Image Preference and Response Ranking. Built with Kiro for Kiroween 2026, Skeleton Crew category.",
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "jsdom": "^31.0.1",
