@@ -105,6 +105,26 @@ ExportRecord {
 
 State persistence: labels and queue positions are saved to local storage under a key per job and pass, so a refresh mid-demo is survivable.
 
+### Task states (FR-Q2, FR-Q3)
+
+The queue tracks one state per task. Transitions are a fixed table in `core/src/queue/taskState.ts`; anything not listed is rejected.
+
+```
+pending --start--> in_progress --submit--> labeled --complete--> done
+   ^                    |
+   |                  skip
+   |                    v
+   +-----requeue----- skipped   (no requeue on the second skip: stays flagged)
+```
+
+- `pending`: waiting to be served.
+- `in_progress`: served to the labeler, no answer yet. At most one task is in progress at a time.
+- `labeled`: a label has been submitted.
+- `done`: the label has been committed by the session, meaning it is stored. `done` is final. The session calls `markDone` after storing the label; the queue does not store anything itself.
+- `skipped`: the first skip re-queues the task at the end of the queue as `pending`. A second skip leaves it `skipped` and flagged. It is not served again and does not hold the queue open.
+
+`labeled` and `done` are separate so the queue can show a submitted label before the session has finished storing it, and so a failed store leaves the task visibly short of `done`.
+
 ## Shared components (the skeleton, listed for the README)
 
 1. `TaskQueue`: loads tasks, tracks state, serves the next task, handles skip and re-queue.
