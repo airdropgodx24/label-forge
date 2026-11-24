@@ -12,6 +12,10 @@ export { LabelShell } from "./LabelShell";
 export type { LabelShellProps } from "./LabelShell";
 export { SessionSetup } from "./SessionSetup";
 export type { SessionChoice, SessionSetupProps } from "./SessionSetup";
+export { JobDashboard } from "./JobDashboard";
+export type { JobDashboardProps } from "./JobDashboard";
+export { describeAgreement, formatLabel, kappaBand, summarizeJob } from "./jobSummary";
+export type { DashboardJob, JobSummary, PassSummary } from "./jobSummary";
 export { keyToAction } from "./keyboard";
 export type { KeyLike, ShellAction } from "./keyboard";
 export {
