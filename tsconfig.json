@@ -13,5 +13,5 @@
     "resolveJsonModule": true,
     "types": ["node"]
   },
-  "include": ["core/**/*.ts", "core/**/*.tsx", "apps/**/*.ts", "apps/**/*.tsx"]
+  "include": ["core/**/*.ts", "core/**/*.tsx", "apps/**/*.ts", "apps/**/*.tsx", "src/**/*.ts", "src/**/*.tsx", "vite.config.ts"]
 }
