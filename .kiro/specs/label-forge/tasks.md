@@ -16,7 +16,7 @@ How to read this plan: each task is sized for one Kiro session (roughly one sitt
 ## Phase 2: Skeleton core (21 to 23 Nov)
 
 - [x] **T2.1 Types and queue.** Implement `core/types.ts` and `TaskQueue` (FR-Q1 to FR-Q3): load tasks from JSON, state machine, skip and re-queue. Unit tests for the state machine.
-- [ ] **T2.2 Label shell and session.** Implement `LabelShell` and `useLabelSession` (FR-S1 to FR-S4): header, progress, action bar, keyboard shortcuts, local storage persistence, labeler name and pass selection.
+- [x] **T2.2 Label shell and session.** Implement `LabelShell` and `useLabelSession` (FR-S1 to FR-S4): header, progress, action bar, keyboard shortcuts, local storage persistence, labeler name and pass selection.
 - [ ] **T2.3 Agreement scoring.** Implement `AgreementScorer` (FR-A1 to FR-A3): percent agreement, Cohen's kappa using each task type's `labelsAgree` rule, disagreement extraction. Unit tests with hand-computed examples, including a kappa case worked out by hand first so the test is a real check.
 - [ ] **T2.4 Export.** Implement `Exporter` (FR-E1 to FR-E4): JSONL and CSV, shared record shape, file naming. Unit test the record shape.
 - [ ] **T2.5 Dashboard.** Implement `JobDashboard` (FR-A4, FR-E1): progress counts, agreement summary in plain English, disagreement list, export buttons.
